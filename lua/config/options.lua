@@ -4,3 +4,7 @@
 
 -- Show relative path to file at the top of buffer
 vim.opt.winbar = "%=%m %f"
+
+-- Disable autoformat on save
+-- https://vi.stackexchange.com/questions/42597/how-to-disable-autoformating-on-save-on-lazyvim
+vim.g.autoformat = false
