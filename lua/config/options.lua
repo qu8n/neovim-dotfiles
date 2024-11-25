@@ -12,7 +12,5 @@ vim.g.autoformat = false
 -- Enable switching away from buffers without saving
 vim.opt.hidden = true
 
--- Enable blamer by default
-vim.g.blamer_enabled = 1
 -- Set date format to mm-dd-yyyy
 vim.g.blamer_date_format = "%m-%d-%Y"
