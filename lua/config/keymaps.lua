@@ -27,3 +27,6 @@ vim.api.nvim_create_user_command("CopyFullPath", function()
   print("Copied: " .. full_path) -- Optional: Display message
 end, {})
 vim.keymap.set("n", "<leader>fP", ":CopyFullPath<CR>", { noremap = true, silent = true, desc = "Copy FULL [F]ile [P]ath" })
+
+-- Escape toggleterm's Terminal mode (in order to split with 2 + Ctrl + /)
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true })

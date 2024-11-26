@@ -2,7 +2,7 @@ return {
   "neo-tree.nvim",
   opts = {
     -- Show sidebar on the right
-    window = { position = "right" },
+    -- window = { position = "right" },
 
     filesystem = {
       filtered_items = {
