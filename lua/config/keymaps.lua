@@ -3,10 +3,10 @@
 -- Add any additional keymaps here
 
 -- CodeCompanion
-vim.keymap.set("n", "<leader>p", "<Nop>", { desc = "Code Companion" })
-vim.keymap.set("n", "<leader>pi", ":CodeCompanion<CR>", { desc = "Open Inline Assistant" })
-vim.keymap.set("n", "<leader>pc", ":CodeCompanionChat Toggle<CR>", { desc = "Toggle Chat Buffer" })
-vim.keymap.set("n", "<leader>pa", ":CodeCompanionActions<CR>", { desc = "Open Action Palette" })
+vim.keymap.set("n", "<leader>a", "<Nop>", { desc = "[A]i Code Companion" })
+vim.keymap.set("n", "<leader>ai", ":CodeCompanion<CR>", { desc = "Toggle [A]i [I]nline Assistant" })
+vim.keymap.set("n", "<leader>ac", ":CodeCompanionChat Toggle<CR>", { desc = "Toggle [A]i [C]hat Buffer" })
+vim.keymap.set("n", "<leader>ap", ":CodeCompanionActions<CR>", { desc = "Open [A]i [P]alette" })
 
 -- Copy file path
 vim.api.nvim_create_user_command("CopyRelPath", function()
@@ -18,7 +18,7 @@ vim.keymap.set(
   "n",
   "<leader>fp",
   ":CopyRelPath<CR>",
-  { noremap = true, silent = true, desc = "Copy relative file path" }
+  { noremap = true, silent = true, desc = "Copy RELATIVE [F]ile [P]ath" }
 )
 
 vim.api.nvim_create_user_command("CopyFullPath", function()
@@ -26,4 +26,4 @@ vim.api.nvim_create_user_command("CopyFullPath", function()
   vim.fn.setreg("+", full_path) -- Copy to system clipboard
   print("Copied: " .. full_path) -- Optional: Display message
 end, {})
-vim.keymap.set("n", "<leader>fP", ":CopyFullPath<CR>", { noremap = true, silent = true, desc = "Copy full file path" })
+vim.keymap.set("n", "<leader>fP", ":CopyFullPath<CR>", { noremap = true, silent = true, desc = "Copy FULL [F]ile [P]ath" })
