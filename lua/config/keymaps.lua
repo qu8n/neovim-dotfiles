@@ -2,11 +2,9 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- CodeCompanion
-vim.keymap.set("n", "<leader>a", "<Nop>", { desc = "[A]i Code Companion" })
-vim.keymap.set("n", "<leader>ai", ":CodeCompanion<CR>", { desc = "Toggle [A]i [I]nline Assistant" })
-vim.keymap.set("n", "<leader>ac", ":CodeCompanionChat Toggle<CR>", { desc = "Toggle [A]i [C]hat Buffer" })
-vim.keymap.set("n", "<leader>ap", ":CodeCompanionActions<CR>", { desc = "Open [A]i [P]alette" })
+-- Avante which-key descriptions
+vim.keymap.set("n", "<leader>a", "<Nop>", { desc = "[A]vante" })
+vim.keymap.set("v", "<leader>a", "<Nop>", { desc = "[A]vante" })
 
 -- Copy file path
 vim.api.nvim_create_user_command("CopyRelPath", function()
