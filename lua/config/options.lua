@@ -14,3 +14,6 @@ vim.opt.hidden = true
 
 -- Set date format to mm-dd-yyyy
 vim.g.blamer_date_format = "%m-%d-%Y"
+
+-- Turn off relative line number (use `s` to search instead)
+vim.opt.relativenumber = false
