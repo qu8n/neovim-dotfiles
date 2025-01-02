@@ -28,3 +28,6 @@ vim.keymap.set("n", "<leader>fP", ":CopyFullPath<CR>", { noremap = true, silent 
 
 -- Escape toggleterm's Terminal mode (in order to split with 2 + Ctrl + /)
 vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true })
+
+-- Toggle git blame
+vim.keymap.set("n", "<leader>cb", ":BlamerToggle<CR>", { noremap = true, silent = true, desc = "Toggle Blamer" })
