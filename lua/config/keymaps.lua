@@ -3,8 +3,8 @@
 -- Add any additional keymaps here
 
 -- Avante which-key descriptions
-vim.keymap.set("n", "<leader>a", "<Nop>", { desc = "[A]vante" })
-vim.keymap.set("v", "<leader>a", "<Nop>", { desc = "[A]vante" })
+vim.keymap.set("n", "<leader>a", "<Nop>", { desc = "Avante" })
+vim.keymap.set("v", "<leader>a", "<Nop>", { desc = "Avante" })
 
 -- Copy file path
 vim.api.nvim_create_user_command("CopyRelPath", function()
@@ -16,7 +16,7 @@ vim.keymap.set(
   "n",
   "<leader>fp",
   ":CopyRelPath<CR>",
-  { noremap = true, silent = true, desc = "Copy RELATIVE [F]ile [P]ath" }
+  { noremap = true, silent = true, desc = "Copy RELATIVE File Path" }
 )
 
 vim.api.nvim_create_user_command("CopyFullPath", function()
@@ -24,7 +24,10 @@ vim.api.nvim_create_user_command("CopyFullPath", function()
   vim.fn.setreg("+", full_path) -- Copy to system clipboard
   print("Copied: " .. full_path) -- Optional: Display message
 end, {})
-vim.keymap.set("n", "<leader>fP", ":CopyFullPath<CR>", { noremap = true, silent = true, desc = "Copy FULL [F]ile [P]ath" })
+vim.keymap.set("n", "<leader>fP", ":CopyFullPath<CR>", { noremap = true, silent = true, desc = "Copy FULL File Path" })
+
+-- Copy current file name
+vim.keymap.set("n", "<leader>fm", ":!echo %:t | pbcopy<CR>", { noremap = true, silent = true, desc = "Copy File Name" })
 
 -- Escape toggleterm's Terminal mode (in order to split with 2 + Ctrl + /)
 vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true })
