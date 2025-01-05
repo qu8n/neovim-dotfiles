@@ -29,6 +29,9 @@ vim.keymap.set("n", "<leader>fP", ":CopyFullPath<CR>", { noremap = true, silent 
 -- Copy current file name
 vim.keymap.set("n", "<leader>fm", ":!echo %:t | pbcopy<CR>", { noremap = true, silent = true, desc = "Copy File Name" })
 
+-- Copy visually highlighted text to clipboard
+vim.keymap.set("v", "<leader>y", '"+y', { noremap = true, silent = true, desc = "Copy to Clipboard" })
+
 -- Escape toggleterm's Terminal mode (in order to split with 2 + Ctrl + /)
 vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true })
 
