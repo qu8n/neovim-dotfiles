@@ -6,13 +6,12 @@
 vim.opt.winbar = "%=%m %f"
 
 -- Disable autoformat on save
--- https://vi.stackexchange.com/questions/42597/how-to-disable-autoformating-on-save-on-lazyvim
 vim.g.autoformat = false
 
 -- Enable switching away from buffers without saving
 vim.opt.hidden = true
 
--- Set date format to mm-dd-yyyy
+-- Set blamer date format to mm-dd-yyyy
 vim.g.blamer_date_format = "%m-%d-%Y"
 
 -- Turn off relative line number (use `s` to search instead)

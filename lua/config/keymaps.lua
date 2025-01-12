@@ -33,7 +33,9 @@ vim.keymap.set("n", "<leader>fm", ":!echo %:t | pbcopy<CR>", { noremap = true, s
 vim.keymap.set("v", "<leader>y", '"+y', { noremap = true, silent = true, desc = "Copy to Clipboard" })
 
 -- Escape toggleterm's Terminal mode (in order to split with 2 + Ctrl + /)
-vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true })
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
 
 -- Toggle git blame
-vim.keymap.set("n", "<leader>cb", ":BlamerToggle<CR>", { noremap = true, silent = true, desc = "Toggle Blamer" })
+vim.keymap.set("n", "<leader>cb", ":BlmerToggle<CR>", { noremap = true, silent = true, desc = "Toggle Blamer" })
+
+vim.keymap.set("", "<leader>xv", require("lsp_lines").toggle, { desc = "Toggle inline diagnostics (lsp_lines)" })
