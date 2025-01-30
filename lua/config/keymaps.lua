@@ -6,6 +6,10 @@
 vim.keymap.set("n", "<leader>a", "<Nop>", { desc = "Avante" })
 vim.keymap.set("v", "<leader>a", "<Nop>", { desc = "Avante" })
 
+vim.keymap.set("n", "<leader>as", "<Nop>", { desc = "Switch provider" })
+vim.keymap.set("n", "<leader>aso", ":AvanteSwitchProvider openai", { noremap = true, silent = true, desc = "OpenAI" })
+vim.keymap.set("n", "<leader>asc", ":AvanteSwitchProvider claude", { noremap = true, silent = true, desc = "Claude" })
+
 -- Copy file path
 vim.api.nvim_create_user_command("CopyRelPath", function()
   local rel_path = vim.fn.expand("%:.") -- Get relative file path
