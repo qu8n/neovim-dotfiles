@@ -20,7 +20,7 @@ vim.keymap.set(
   "n",
   "<leader>fp",
   ":CopyRelPath<CR>",
-  { noremap = true, silent = true, desc = "Copy RELATIVE File Path" }
+  { noremap = true, silent = true, desc = "pbcopy RELATIVE File Path" }
 )
 
 vim.api.nvim_create_user_command("CopyFullPath", function()
@@ -28,10 +28,10 @@ vim.api.nvim_create_user_command("CopyFullPath", function()
   vim.fn.setreg("+", full_path) -- Copy to system clipboard
   print("Copied: " .. full_path) -- Optional: Display message
 end, {})
-vim.keymap.set("n", "<leader>fP", ":CopyFullPath<CR>", { noremap = true, silent = true, desc = "Copy FULL File Path" })
+vim.keymap.set("n", "<leader>fP", ":CopyFullPath<CR>", { noremap = true, silent = true, desc = "pbcopy ABSOLUTE File Path" })
 
 -- Copy current file name
-vim.keymap.set("n", "<leader>fm", ":!echo %:t | pbcopy<CR>", { noremap = true, silent = true, desc = "Copy File Name" })
+vim.keymap.set("n", "<leader>fm", ":!echo %:t | pbcopy<CR>", { noremap = true, silent = true, desc = "pbcopy File Name" })
 
 -- Copy visually highlighted text to clipboard
 vim.keymap.set("v", "<leader>y", '"+y', { noremap = true, silent = true, desc = "Copy to Clipboard" })
