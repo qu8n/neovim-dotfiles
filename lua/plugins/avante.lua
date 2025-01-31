@@ -4,7 +4,18 @@ return {
   lazy = false,
   version = false, -- set this if you want to always pull the latest change
   opts = {
-    -- add any opts here
+    -- Add Ollama as a custom provider
+    -- (Start ollama with `ollama serve` and deepseek with `ollama run deepseek-coder-v2:16b --keepalive=-1m`)
+    -- (Warning: this runs very slow)
+    provider = "ollama",
+    vendors = {
+      ollama = {
+        __inherited_from = "openai",
+        api_key_name = "",
+        endpoint = "http://localhost:11434/v1",
+        model = "deepseek-coder-v2:16b",
+      },
+    },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   build = "make",
