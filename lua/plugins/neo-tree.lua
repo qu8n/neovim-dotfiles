@@ -1,4 +1,4 @@
--- Add a similar sidebar for viewing folder structure like that of VS Code
+-- Add custom configs to the built-in sidebar file explorer plugin
 return {
   "neo-tree.nvim",
   opts = {
@@ -7,14 +7,16 @@ return {
 
     filesystem = {
       filtered_items = {
+        -- Show hidden files, but dim/gray them out for less visual clutter
         visible = true,
         hide_dotfiles = false,
-        hide_gitignored = true,
+        hide_gitignored = true, -- hide all files specified in .gitignore
         hide_by_name = {
           ".github",
           ".gitignore",
           "package-lock.json",
         },
+        -- Do not show these files/folders at all
         never_show = { ".git" },
       },
     },
