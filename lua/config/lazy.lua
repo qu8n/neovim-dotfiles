@@ -1,3 +1,5 @@
+-- This file is mostly boilerplate, except for the USER SETTINGS section
+
 -- Download lazy.nvim if it doesn't already exist
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -19,12 +21,15 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    -- language-specific plugins
+
+    -- USER SETTINGS
+    -- Enable language-specific plugins
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.python" },
     { import = "lazyvim.plugins.extras.lang.json" },
-    -- animation for leap.nvim
+    -- Enable animation for leap.nvim
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
+
     -- import/override with your plugins
     { import = "plugins" },
   },

@@ -1,3 +1,4 @@
+-- Add a similar sidebar for viewing folder structure like that of VS Code
 return {
   "neo-tree.nvim",
   opts = {

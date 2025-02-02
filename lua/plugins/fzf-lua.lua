@@ -1,4 +1,5 @@
--- https://www.reddit.com/r/neovim/comments/1hhiidm/a_few_nice_fzflua_configurations_now_that_lazyvim
+-- Add custom configs to the built-in file picker plugin
+-- Source: https://www.reddit.com/r/neovim/comments/1hhiidm/a_few_nice_fzflua_configurations_now_that_lazyvim
 return {
   "ibhagwan/fzf-lua",
   opts = {

@@ -1,3 +1,4 @@
+-- Add custom configs to various plugins for TailwindCSS QoL improvements
 -- Source: https://www.youtube.com/watch?v=_NiWhZeR-MY
 return {
   {

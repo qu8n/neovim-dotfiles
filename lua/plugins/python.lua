@@ -1,3 +1,4 @@
+-- Modify the Python LSP configs to support formatting
 -- Source: https://www.reddit.com/r/neovim/comments/15ps0vx/comment/jw1b6vl
 return {
   {

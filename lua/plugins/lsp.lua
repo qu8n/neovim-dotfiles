@@ -1,3 +1,4 @@
+-- Add custom configs to the built-in LSP client
 return {
   {
     "nvim-lspconfig",

@@ -1,3 +1,4 @@
+-- Emulate the behavior of the Cursor IDE
 return {
   "yetone/avante.nvim",
   event = "VeryLazy",
