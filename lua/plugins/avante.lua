@@ -5,11 +5,10 @@ return {
   lazy = false,
   version = false, -- set this if you want to always pull the latest change
   opts = {
-    -- Add Ollama as a custom provider
-    -- (Start ollama with `ollama serve` and deepseek with `ollama run deepseek-coder-v2:16b --keepalive=-1m`)
-    -- (Warning: this runs very slow)
-    provider = "ollama",
-    vendors = {
+    provider = "claude", -- default provider
+    vendors = { -- custom providers
+      -- Start ollama with `ollama serve` and deepseek with `ollama run deepseek-coder-v2:16b --keepalive=-1m`
+      -- (Warning: this runs very slow)
       ollama = {
         __inherited_from = "openai",
         api_key_name = "",
@@ -27,7 +26,6 @@ return {
     --- The below dependencies are optional,
     "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
     "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-    "zbirenbaum/copilot.lua", -- for providers='copilot'
     {
       -- support for image pasting
       "HakonHarnes/img-clip.nvim",
