@@ -1,10 +1,8 @@
--- Add custom configs to the built-in sidebar file explorer plugin
+-- Add custom configs to the built-in file explorer plugin
 return {
   "neo-tree.nvim",
   opts = {
-    -- Show sidebar on the right
-    -- window = { position = "right" },
-
+    window = { position = "float" },
     filesystem = {
       filtered_items = {
         -- Show hidden files, but dim/gray them out for less visual clutter
